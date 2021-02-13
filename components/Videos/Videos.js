@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Description, Title, VideoIframe, VideoItemWrapper, VideosWrapper } from './StyledVideos';
-
+import VideoItem from '../VideoItem/VideoItem';
+import { VideosWrapper } from './StyledVideos';
 
 const Videos = ({ videos }) => {
 
@@ -18,17 +18,11 @@ const Videos = ({ videos }) => {
     return (
         <VideosWrapper>
             {videos.map((video) => (
-                <VideoItemWrapper key={video.id}>
-                    <VideoIframe>
-                        <iframe src={video?.src}>
-                        </iframe>
-                    </VideoIframe>
-                    <Title>{video?.title}</Title>
-                    <Description>{video?.description}</Description>
-                </VideoItemWrapper>
+                <VideoItem key={video?.id} video={video} />
             ))}
         </VideosWrapper>
     )
+    
     {/* {videos.length === 0 ? <h2>Loading...</h2> :
                 (
                     videos.map(video => (

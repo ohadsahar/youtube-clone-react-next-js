@@ -17,7 +17,6 @@ const Layout = ({ children }) => {
                     {children}
                 </main>
             </LayoutWrapper>
-
             <BottomNavigation />
         </div>
     )

@@ -4,9 +4,7 @@ import videos from '../data';
 
 export default function Home() {
   return (
-    <div >
-      <Videos videos={videos} />
-    </div>
+    <Videos videos={videos} />
   )
 }
 
