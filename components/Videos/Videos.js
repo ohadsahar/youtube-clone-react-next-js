@@ -14,22 +14,10 @@ const Videos = ({ videos }) => {
     //     dispatch(getAllVideos(url));
     // }, [dispatch])
 
-    //console.log(videos);
 
     return (
-        //         <div className="content" >
-        // {videos.map((video) => (
-        //     <div className="video-frame" key={video.id}>
-        //         <iframe className="video" src={video.src}>
-        //         </iframe>
-        //         <p className="title">{video.title}</p>
-        //         <p className="sub-title">{video.description}</p>
-        //     </div>
-        // ))}
-        // </div >
         <VideosWrapper>
             {videos.map((video) => (
-                console.log(video?.src),
                 <VideoItemWrapper key={video.id}>
                     <VideoIframe>
                         <iframe src={video?.src}>
@@ -40,9 +28,6 @@ const Videos = ({ videos }) => {
                 </VideoItemWrapper>
             ))}
         </VideosWrapper>
-
-
-
     )
     {/* {videos.length === 0 ? <h2>Loading...</h2> :
                 (

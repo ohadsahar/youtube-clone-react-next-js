@@ -12,7 +12,6 @@ const Nav = () => {
 
     const handleModalStatus = () => {
         const newValue = !showModal;
-        console.log(newValue);
         setModalStatus(newValue);
     }
 
